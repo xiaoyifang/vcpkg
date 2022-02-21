@@ -1,0 +1,20 @@
+{
+  "name": "libebu",
+  "version": "4.5.0",
+  "port-version": 2,
+  "description": "libebu - a library to parse epwing format ebook",
+  "homepage": "http://green.ribbon.to/~ikazuhiro/dic/files/",
+  "supports": "!uwp",
+  "dependencies": [
+    
+    "zlib"
+  ],
+  "features":{
+    "zlib": {
+      "description": "zlib support",
+      "dependencies": [
+        "zlib"
+      ]
+    }
+  }
+}

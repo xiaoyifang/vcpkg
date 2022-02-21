@@ -1,0 +1,39 @@
+From 3e599f153a71ee83ee7d9be94d78cd4b2b479543 Mon Sep 17 00:00:00 2001
+From: xiaoyifang <yifang.xiao@outlook.com>
+Date: Mon, 21 Feb 2022 23:32:28 +0800
+Subject: [PATCH] remove cross compile test
+
+---
+ configure | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+diff --git a/configure b/configure
+index 18c8682..46c713a 100644
+--- a/configure
++++ b/configure
+@@ -1285,14 +1285,14 @@ build=$build_alias
+ host=$host_alias
+ target=$target_alias
+ 
+-# FIXME: To remove some day.
+-if test "x$host_alias" != x; then
+-  if test "x$build_alias" = x; then
+-    cross_compiling=maybe
+-  elif test "x$build_alias" != "x$host_alias"; then
+-    cross_compiling=yes
+-  fi
+-fi
++# # FIXME: To remove some day.
++# if test "x$host_alias" != x; then
++#   if test "x$build_alias" = x; then
++#     cross_compiling=maybe
++#   elif test "x$build_alias" != "x$host_alias"; then
++#     cross_compiling=yes
++#   fi
++# fi
+ 
+ ac_tool_prefix=
+ test -n "$host_alias" && ac_tool_prefix=$host_alias-
+-- 
+2.30.0.windows.2
+
