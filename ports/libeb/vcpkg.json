@@ -1,0 +1,11 @@
+{
+  "name": "libeb",
+  "version": "4.4.3",
+  "port-version": 2,
+  "description": "libeb - a library to parse epwing format ebook",
+  "homepage": "http://green.ribbon.to/~ikazuhiro/dic/files/",
+  "supports": "!uwp",
+  "dependencies": [
+    "zlib"
+  ]
+}
