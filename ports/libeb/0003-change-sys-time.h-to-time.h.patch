@@ -1,0 +1,53 @@
+From 0f01405f76d80067ce0f34e4de57239cbb6f7c24 Mon Sep 17 00:00:00 2001
+From: xiaoyifang <xiaoyifang@vv.cn>
+Date: Wed, 23 Feb 2022 16:05:11 +0800
+Subject: [PATCH] change sys/time.h to time.h
+
+---
+ eb/build-pre.h | 2 +-
+ eb/ebnet.c     | 2 +-
+ eb/linebuf.c   | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/eb/build-pre.h b/eb/build-pre.h
+index 8873869..37318f2 100644
+--- a/eb/build-pre.h
++++ b/eb/build-pre.h
+@@ -46,7 +46,7 @@
+ #include <stdarg.h>
+ #include <limits.h>
+ #include <fcntl.h>
+-#include <sys/time.h>
++#include <time.h>
+ 
+ #ifdef HAVE_DIRECT_H
+ #include <direct.h>
+diff --git a/eb/ebnet.c b/eb/ebnet.c
+index e01beeb..2f5da38 100644
+--- a/eb/ebnet.c
++++ b/eb/ebnet.c
+@@ -33,7 +33,7 @@
+ #include "build-pre.h"
+ 
+ #include <sys/socket.h>
+-#include <sys/time.h>
++#include <time.h>
+ 
+ #include "eb.h"
+ #include "error.h"
+diff --git a/eb/linebuf.c b/eb/linebuf.c
+index e6951e0..47524a9 100644
+--- a/eb/linebuf.c
++++ b/eb/linebuf.c
+@@ -36,7 +36,7 @@
+ #include <sys/socket.h>
+ #include <string.h>
+ #include <stdlib.h>
+-#include <sys/time.h>
++#include <time.h>
+ 
+ #include "linebuf.h"
+ 
+-- 
+2.33.1.windows.1
+

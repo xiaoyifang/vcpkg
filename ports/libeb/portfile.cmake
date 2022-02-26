@@ -6,14 +6,13 @@ vcpkg_download_distfile(ARCHIVE
 vcpkg_extract_source_archive_ex(
     OUT_SOURCE_PATH SOURCE_PATH
     ARCHIVE ${ARCHIVE}
-    # PATCHES "0001-1.patch"
+    PATCHES "0001-remove-unistd.h.patch" "0002-remove-dirent.h.patch" "0003-change-sys-time.h-to-time.h.patch"
 )
 if(VCPKG_TARGET_IS_WINDOWS)
   set(_file "${SOURCE_PATH}/configure.ac")
   if(EXISTS ${_file})
       file(READ "${_file}" _contents)
       string(REPLACE "-lz" "-lzlibd" _contents "${_contents}")
-      # string(REGEX REPLACE "\\r" "-test-" _contents "${_contents}")
       file(WRITE "${_file}" "${_contents}")
       configure_file("${_file}" "${_file}" @ONLY  NEWLINE_STYLE LF)
   endif()

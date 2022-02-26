@@ -1,0 +1,115 @@
+From a7ab09187a907a22e5879f3e30b615e99e730968 Mon Sep 17 00:00:00 2001
+From: xiaoyifang <xiaoyifang@vv.cn>
+Date: Wed, 23 Feb 2022 15:51:35 +0800
+Subject: [PATCH] remove unistd.h
+
+---
+ eb/bitmap.c           | 1 -
+ eb/build-pre.h        | 1 -
+ eb/linebuf.c          | 1 -
+ eb/zio.c              | 1 -
+ ebfont/ebfont.c       | 1 -
+ ebrefile/ebrefile.c   | 1 -
+ ebzip/ebzip.h         | 1 -
+ libebutils/getumask.c | 1 -
+ 8 files changed, 8 deletions(-)
+
+diff --git a/eb/bitmap.c b/eb/bitmap.c
+index 793f11b..24c2819 100644
+--- a/eb/bitmap.c
++++ b/eb/bitmap.c
+@@ -1290,7 +1290,6 @@ eb_bitmap_to_png(const char *bitmap, int width, int height, char *png,
+ #ifdef TEST
+ 
+ #include <stdlib.h>
+-#include <unistd.h>
+ #include <fcntl.h>
+ 
+ #define test_width 32
+diff --git a/eb/build-pre.h b/eb/build-pre.h
+index 239dfa2..77c0be4 100644
+--- a/eb/build-pre.h
++++ b/eb/build-pre.h
+@@ -45,7 +45,6 @@
+ #include <stdlib.h>
+ #include <stdarg.h>
+ #include <limits.h>
+-#include <unistd.h>
+ #include <dirent.h>
+ #include <fcntl.h>
+ #include <sys/time.h>
+diff --git a/eb/linebuf.c b/eb/linebuf.c
+index 6aab186..e6951e0 100644
+--- a/eb/linebuf.c
++++ b/eb/linebuf.c
+@@ -36,7 +36,6 @@
+ #include <sys/socket.h>
+ #include <string.h>
+ #include <stdlib.h>
+-#include <unistd.h>
+ #include <sys/time.h>
+ 
+ #include "linebuf.h"
+diff --git a/eb/zio.c b/eb/zio.c
+index 160337f..e2632b2 100644
+--- a/eb/zio.c
++++ b/eb/zio.c
+@@ -36,7 +36,6 @@
+ #include <string.h>
+ #include <stdlib.h>
+ #include <limits.h>
+-#include <unistd.h>
+ #include <fcntl.h>
+ 
+ #ifdef ENABLE_PTHREAD
+diff --git a/ebfont/ebfont.c b/ebfont/ebfont.c
+index 44c23e0..072806d 100644
+--- a/ebfont/ebfont.c
++++ b/ebfont/ebfont.c
+@@ -37,7 +37,6 @@
+ #include <string.h>
+ #include <stdlib.h>
+ #include <limits.h>
+-#include <unistd.h>
+ #include <fcntl.h>
+ 
+ #ifdef ENABLE_NLS
+diff --git a/ebrefile/ebrefile.c b/ebrefile/ebrefile.c
+index 078c9c1..8dd8d88 100644
+--- a/ebrefile/ebrefile.c
++++ b/ebrefile/ebrefile.c
+@@ -38,7 +38,6 @@
+ #include <string.h>
+ #include <stdlib.h>
+ #include <limits.h>
+-#include <unistd.h>
+ #include <fcntl.h>
+ #include <utime.h>
+ 
+diff --git a/ebzip/ebzip.h b/ebzip/ebzip.h
+index ee29994..1593dec 100644
+--- a/ebzip/ebzip.h
++++ b/ebzip/ebzip.h
+@@ -41,7 +41,6 @@
+ #include <string.h>
+ #include <stdlib.h>
+ #include <limits.h>
+-#include <unistd.h>
+ #include <dirent.h>
+ #include <fcntl.h>
+ #include <utime.h>
+diff --git a/libebutils/getumask.c b/libebutils/getumask.c
+index 45e95a7..aa43109 100644
+--- a/libebutils/getumask.c
++++ b/libebutils/getumask.c
+@@ -37,7 +37,6 @@
+ 
+ #include <sys/types.h>
+ #include <sys/stat.h>
+-#include <unistd.h>
+ 
+ /*
+  * Get the current umask.
+-- 
+2.33.1.windows.1
+

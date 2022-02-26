@@ -1,0 +1,37 @@
+From 040ee5a0c6854b6446e306e5dafb0a771d60068a Mon Sep 17 00:00:00 2001
+From: xiaoyifang <xiaoyifang@vv.cn>
+Date: Wed, 23 Feb 2022 15:58:04 +0800
+Subject: [PATCH] remove dirent.h
+
+---
+ eb/build-pre.h | 1 -
+ ebzip/ebzip.h  | 1 -
+ 2 files changed, 2 deletions(-)
+
+diff --git a/eb/build-pre.h b/eb/build-pre.h
+index 77c0be4..8873869 100644
+--- a/eb/build-pre.h
++++ b/eb/build-pre.h
+@@ -45,7 +45,6 @@
+ #include <stdlib.h>
+ #include <stdarg.h>
+ #include <limits.h>
+-#include <dirent.h>
+ #include <fcntl.h>
+ #include <sys/time.h>
+ 
+diff --git a/ebzip/ebzip.h b/ebzip/ebzip.h
+index 1593dec..d1e5f91 100644
+--- a/ebzip/ebzip.h
++++ b/ebzip/ebzip.h
+@@ -41,7 +41,6 @@
+ #include <string.h>
+ #include <stdlib.h>
+ #include <limits.h>
+-#include <dirent.h>
+ #include <fcntl.h>
+ #include <utime.h>
+ 
+-- 
+2.33.1.windows.1
+
