@@ -1,0 +1,19 @@
+{
+  "name": "libeb",
+  "version": "4.4.3",
+  "port-version": 1,
+  "description": "C library for accessing CD-ROM books. Supports EB, EBG, EBXA, EBXA-C, S-EBXA and EPWING formats",
+  "homepage": "https://github.com/xiaoyifang/eb",
+  "license": "GPL-2.0",
+  "supports": "!uwp",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake",
+      "host": true,
+      "platform": "windows"
+    },
+    {
+      "name": "zlib"
+    }
+  ]
+}
